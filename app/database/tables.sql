@@ -19,8 +19,9 @@ CREATE TABLE IF NOT EXISTS categorias (
     nome            TEXT    NOT NULL
 );
 
-INSERT INTO categorias (id, nome) values (1,'grão');
-INSERT INTO categorias (id, nome) values (2,'enlatado');
+INSERT INTO categorias (id, nome) values (1,'Grão');
+INSERT INTO categorias (id, nome) values (2,'Enlatado');
+INSERT INTO categorias (id, nome) values (3,'Empacotado');
 
 DROP TABLE IF EXISTS produtos;
 CREATE TABLE IF NOT EXISTS produtos (
@@ -33,3 +34,24 @@ CREATE TABLE IF NOT EXISTS produtos (
 
 insert into produtos(id, nome, valor, categoria_id) values(1, 'Arroz', 4.20, 1);
 insert into produtos(id, nome, valor, categoria_id) values(2, 'Milho', 25.36, 2);
+
+DROP TABLE IF EXISTS pedidos;
+CREATE TABLE IF NOT EXISTS pedidos (
+    id              INTEGER PRIMARY KEY,
+    nomeCliente TEXT not NULL,
+    instant         TEXT
+
+);
+
+DROP TABLE IF EXISTS item_pedido;
+CREATE TABLE IF NOT EXISTS item_pedido (
+    id      INTEGER PRIMARY KEY,
+    produto_id      TEXT    NOT NULL,
+    pedido_id      TEXT    NOT NULL,
+
+    FOREIGN KEY (produto_id)
+       REFERENCES produtos (id),
+    FOREIGN KEY (pedido_id)
+       REFERENCES pedidos (id)
+
+);

@@ -26,7 +26,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="<?=route('usuarios')?>">Usuários</a>
+          <a class="nav-link" href="<?=route('produtos')?>">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=route('pedidos')?>">Pedidos</a>
         </li>
       </ul>
     </div>

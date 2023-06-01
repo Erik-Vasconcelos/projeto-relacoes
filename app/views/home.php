@@ -6,7 +6,14 @@
 </head>
 <body>
 
-<div class="container">
+<h1>Seja bem-vindo</h1>
+<p>
+    <h4>Na relacionamento 1 x N, é realizado um cadastro de produtos que se relacionam com categorias(um produto pode ter uma categoria e uma categoria pode estar relacionada com vários produtos )</h4>
+    <h4>No relacionamento N x M, foi criado uma tabela pedidos que possuem itens de pedidos, onde os itens se relacionam com os produtos</h4>
+</p>
+
+<p>link do projeto<a href="<?=route("produtos")?>"><?=route("produtos")?></a> </p>
+<!-- <div class="container">
 
     <h2 class='mt-3'>"Framework" MVC simples</h2>
 
@@ -88,6 +95,6 @@
         <p>Por fim, caso você precise de novas funções globais, inclua-as em <b>app/sys/util.php<b></p>
         </div>
     </div>
-</div>
+</div> -->
 </body>
 </html>
